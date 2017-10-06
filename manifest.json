@@ -1,0 +1,38 @@
+{
+  "manifest_version": 2,
+
+  "name": "TheBitcoin.pub Doge Companion",
+  "description": "This extension allows the user to \"Smash Like!\" multiple posts in a topic on TheBitcoin.pub!",
+  "version": "1.0",
+  "options_page": "options.html",
+  "icons": { "16": "images/icon16.png",
+           "48": "images/icon48.png",
+          "128": "images/icon128.png" },
+  "browser_action": {
+    "default_icon": "images/doge.png",
+    "default_popup": "popup.html",
+    "default_title": "Click here!"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://thebitcoin.pub/*","http://thebitcoin.pub/*"],
+      "css": [
+        "css/doge.css"
+      ],
+      "js": [
+        "js/jquery-3.2.1.min.js",
+        "js/popper.min.js",
+        "js/bootstrap.min.js",
+        "js/myscript.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "web_accessible_resources": [
+   "images/*.png",
+   "css/doge.css"
+ ]
+}

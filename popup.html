@@ -1,0 +1,47 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>TheBitcoin.pub Doge Companion Chrome Extension!</title>
+    <style type="text/css">
+      body {
+        margin: 10px;
+      }
+
+      h1 {
+        font-size: 15px;
+      }
+
+      #container {
+        align-items: center;
+        display: block;
+        width: 300px;
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+    -->
+    <!-- <script src="js/popup.js"></script> -->
+  </head>
+
+  <body>
+    <h1>TheBitcoin.pub Doge Companion Chrome Extension!</h1>
+    <div id="container">
+      <p>
+        I'm TheBitcoin.pub Doge Companion! Just navigate to a topic page and there will
+        a clickable DOGE icon used to "Smash Like" multiple posts!
+        Example url navigate to: https://thebitcoin.pub/t/*
+
+        If there are no more posts to like, Doge will just say a random quote!
+      </p>
+    </div>
+  </body>
+</html>
