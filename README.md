@@ -20,4 +20,23 @@ Once you have the .crx file, do the following:
 3. Drag and drop the "crx" extension file onto the Extensions page from [step 1] ( .crx file should likely be in your Downloads directory )
 4. Install.
 
+# Features
+
 # Doge Quotes
+The Doge companion can pop-up text above it's head. The quotes can be managed
+in the options page of the extension. Each quote is parsed by a new line (\n).
+To add new quotes for the Doge companion to say, just add a text on a new line
+in the text area on the options page.
+
+Doge will say the quotes randomly!
+
+# SMASH Likes
+The Doge companion can like multiple posts under a topic on thebitcoin.pub site.
+To use this feature, simply navigate to a topic page (thebitcoin.pub/t/a-topic-page)
+and click on the Doge companion at the bottom right corner of the browser.
+
+Once Doge likes a post or posts, it'll tell you how many posts you've SMASH liked
+
+Example: +5
+
+Note: If there are no posts to like, then Doge will fallback to saying random quotes!
