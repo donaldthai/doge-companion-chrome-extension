@@ -28,7 +28,7 @@ in the options page of the extension. Each quote is parsed by a new line (\n).
 To add new quotes for the Doge companion to say, just add a text on a new line
 in the text area on the options page.
 
-Doge will say the quotes randomly!
+Doge will say the quotes randomly when clicked on!
 
 # SMASH Likes
 The Doge companion can like multiple posts under a topic on thebitcoin.pub site.
