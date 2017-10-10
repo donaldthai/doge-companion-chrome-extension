@@ -41,5 +41,5 @@ Example: +5
 
 Note: If there are no posts to like, then Doge will fallback to saying random quotes!
 
-#Options
+# Options
 You can manage your Doge quotes and enable/disable the SMASH likes in here!
