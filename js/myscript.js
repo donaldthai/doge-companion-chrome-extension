@@ -3,11 +3,17 @@ var html = '<div id="liker">' +
 '</div>';
 var url = chrome.extension.getURL("images/doge.png");
 //grab the quotes from stroage
+var default_enableSmash = true;
+var default_quotes = "YOOOOOOoooooooooooooooooooooooooooooooooooooooooooooo!\nDOGE\nMuch Wow!\nNOPE!\nSO Amaze!";
 var quotes;
+var enableSmash;
+
 chrome.storage.sync.get({
-  quotes: "YOOOOOOoooooooooooooooooooooooooooooooooooooooooooooo!\nDOGE\nMuch Wow!\nNOPE!\nSO Amaze!"
+  quotes: default_quotes,
+  enableSmash: default_enableSmash
 }, function(items) {
   quotes = items.quotes.split("\n");
+  enableSmash = items.enableSmash;
 });
 //if storage is updated, update quotes
 chrome.runtime.onMessage.addListener(
@@ -15,12 +21,11 @@ chrome.runtime.onMessage.addListener(
     console.log(sender.tab ?
                 "from a content script:" + sender.tab.url :
                 "from the extension");
-    if (!request.quotes)
-    {
-      var defaultQuotes = "YOOOOOOoooooooooooooooooooooooooooooooooooooooooooooo!\nDOGE\nMuch Wow!\nNOPE!\nSO Amaze!";
-      quotes = defaultQuotes.split("\n");
-    } else {
+    if (quotes.join("\n") != request.quotes) {
       quotes = request.quotes.split("\n");
+    }
+    if (enableSmash != request.enableSmash) {
+      enableSmash = request.enableSmash;
     }
   });
 
@@ -37,7 +42,7 @@ $liker.popover({ placement: "top" });
 $img.off("click");
 $img.on("click", function() {
   var $postsToLike = $("button.like > i.d-icon-heart");
-  if ($postsToLike.length > 0) {
+  if ($postsToLike.length > 0 && enableSmash) {
     $postsToLike.trigger("click");
     $liker.attr("data-content", "+" + $postsToLike.length);
   } else {

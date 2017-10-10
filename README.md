@@ -40,3 +40,6 @@ Once Doge likes a post or posts, it'll tell you how many posts you've SMASH like
 Example: +5
 
 Note: If there are no posts to like, then Doge will fallback to saying random quotes!
+
+#Options
+You can manage your Doge quotes and enable/disable the SMASH likes in here!
